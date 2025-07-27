@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e7dfe1983040957e4fde3a38ece3bff8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e7dfe1983040957e4fde3a38ece3bff8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e7dfe1983040957e4fde3a38ece3bff8 = L.map(
+                "map_e7dfe1983040957e4fde3a38ece3bff8",
+                {
+                    center: [35.68752743609295, 139.78384028347995],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f205f468f0bea9d437ba65522bed6028 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f205f468f0bea9d437ba65522bed6028.addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+    
+            var poly_line_5c06f52c4268b01e72968f5e089f51e0 = L.polyline(
+                [[35.6921511, 139.7827663], [35.692883, 139.781865], [35.6950091, 139.7845687], [35.6942423, 139.7896756], [35.6912797, 139.7898473], [35.6901295, 139.7887315], [35.6882822, 139.7897185], [35.6861559, 139.7919931], [35.6850405, 139.7919501], [35.682461, 139.7882594], [35.6800557, 139.7827233], [35.6802649, 139.7818221], [35.6811015, 139.780878], [35.6826702, 139.7822942], [35.6836811, 139.7842683], [35.6826004, 139.7852124]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7}
+            ).addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+    
+            poly_line_5c06f52c4268b01e72968f5e089f51e0.bindTooltip(
+                `<div>
+                     line1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3a521ae31783e91fac436ff6a757d6dc = L.polyline(
+                [[35.6920085, 139.7715882], [35.6909149, 139.7719905], [35.6905794, 139.7707996], [35.6918865, 139.7714165]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7}
+            ).addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+    
+            poly_line_3a521ae31783e91fac436ff6a757d6dc.bindTooltip(
+                `<div>
+                     line2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e240a60f8e9c5cf45920741a53b98fc2 = L.polyline(
+                [[35.6874723, 139.7812144], [35.6845966, 139.7838108]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7}
+            ).addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+    
+            poly_line_e240a60f8e9c5cf45920741a53b98fc2.bindTooltip(
+                `<div>
+                     line3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_caa5f0b8b8c249fdf8f07bb9414c7c2e = L.polyline(
+                [[35.6915999, 139.7748064], [35.6871558, 139.7766946], [35.6845415, 139.7771667]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 7}
+            ).addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+    
+            poly_line_caa5f0b8b8c249fdf8f07bb9414c7c2e.bindTooltip(
+                `<div>
+                     line4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_3d007e137fcec53ae6fe17a98042e247 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_d3ca20f5d2124a4ea34ff9c75d9b161d = L.circleMarker(
+                [35.679059, 139.769114],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.613241566898143, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_623e1a58e05bc88bd359571b180c27d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c32cdeb28d2f2c0b2320ad9c5bfed344 = $(`<div id="html_c32cdeb28d2f2c0b2320ad9c5bfed344" style="width: 100.0%; height: 100.0%;">     <b>Joto Elementary School</b><br>     Capacity: 2,480</div>`)[0];
+                popup_623e1a58e05bc88bd359571b180c27d0.setContent(html_c32cdeb28d2f2c0b2320ad9c5bfed344);
+            
+        
+
+        circle_marker_d3ca20f5d2124a4ea34ff9c75d9b161d.bindPopup(popup_623e1a58e05bc88bd359571b180c27d0)
+        ;
+
+        
+    
+    
+            circle_marker_d3ca20f5d2124a4ea34ff9c75d9b161d.bindTooltip(
+                `<div>
+                     Joto Elementary School (Capacity: 2480)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81413d6ac9e20eea72e669ef93a5f0ca = L.circleMarker(
+                [35.673121, 139.771593],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.256671268725917, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_e4a51296c710a9a1eb9472dbee6086b7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cdb8e4a8e9d74520db0a97a0b898002c = $(`<div id="html_cdb8e4a8e9d74520db0a97a0b898002c" style="width: 100.0%; height: 100.0%;">     <b>Kyobashi Plaza</b><br>     Capacity: 1,038</div>`)[0];
+                popup_e4a51296c710a9a1eb9472dbee6086b7.setContent(html_cdb8e4a8e9d74520db0a97a0b898002c);
+            
+        
+
+        circle_marker_81413d6ac9e20eea72e669ef93a5f0ca.bindPopup(popup_e4a51296c710a9a1eb9472dbee6086b7)
+        ;
+
+        
+    
+    
+            circle_marker_81413d6ac9e20eea72e669ef93a5f0ca.bindTooltip(
+                `<div>
+                     Kyobashi Plaza (Capacity: 1038)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0497798f80c99a071e6010e89597b60 = L.circleMarker(
+                [35.672383, 139.761495],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.589503183663377, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_d0e7db62f6bec27b50a3eaa2964f204b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4d204c8704fc914aab984b57d829a458 = $(`<div id="html_4d204c8704fc914aab984b57d829a458" style="width: 100.0%; height: 100.0%;">     <b>Taimei Elementary School</b><br>     Capacity: 2,384</div>`)[0];
+                popup_d0e7db62f6bec27b50a3eaa2964f204b.setContent(html_4d204c8704fc914aab984b57d829a458);
+            
+        
+
+        circle_marker_f0497798f80c99a071e6010e89597b60.bindPopup(popup_d0e7db62f6bec27b50a3eaa2964f204b)
+        ;
+
+        
+    
+    
+            circle_marker_f0497798f80c99a071e6010e89597b60.bindTooltip(
+                `<div>
+                     Taimei Elementary School (Capacity: 2384)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0a2d01ab6c6a0c630c5c164c0c06283 = L.circleMarker(
+                [35.665512, 139.764854],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.13499144841229, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_21c20137a918360a1b6bace9a6ec63f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5e014131eb01a04fde276054ce703ef = $(`<div id="html_d5e014131eb01a04fde276054ce703ef" style="width: 100.0%; height: 100.0%;">     <b>Ginza Junior High School</b><br>     Capacity: 4,590</div>`)[0];
+                popup_21c20137a918360a1b6bace9a6ec63f2.setContent(html_d5e014131eb01a04fde276054ce703ef);
+            
+        
+
+        circle_marker_d0a2d01ab6c6a0c630c5c164c0c06283.bindPopup(popup_21c20137a918360a1b6bace9a6ec63f2)
+        ;
+
+        
+    
+    
+            circle_marker_d0a2d01ab6c6a0c630c5c164c0c06283.bindTooltip(
+                `<div>
+                     Ginza Junior High School (Capacity: 4590)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_606d83a78333c8933e77ec50d0e70e5a = L.circleMarker(
+                [35.672171, 139.77876],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.726987986564735, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_56853f948349e9cb6b82634cc8c2cab1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5a1531ed54b891901a4f775f9e759f4 = $(`<div id="html_c5a1531ed54b891901a4f775f9e759f4" style="width: 100.0%; height: 100.0%;">     <b>Chuo Elementary School</b><br>     Capacity: 2,940</div>`)[0];
+                popup_56853f948349e9cb6b82634cc8c2cab1.setContent(html_c5a1531ed54b891901a4f775f9e759f4);
+            
+        
+
+        circle_marker_606d83a78333c8933e77ec50d0e70e5a.bindPopup(popup_56853f948349e9cb6b82634cc8c2cab1)
+        ;
+
+        
+    
+    
+            circle_marker_606d83a78333c8933e77ec50d0e70e5a.bindTooltip(
+                `<div>
+                     Chuo Elementary School (Capacity: 2940)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07a59493d5b3d2f7290e458d8730fff2 = L.circleMarker(
+                [35.668734, 139.776472],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.96511364338849, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_74a41b56a4d063a551ecfd76993b7c8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2aab409a08efafc29cc96abf95dda3c7 = $(`<div id="html_2aab409a08efafc29cc96abf95dda3c7" style="width: 100.0%; height: 100.0%;">     <b>Akashi Elementary School</b><br>     Capacity: 3,903</div>`)[0];
+                popup_74a41b56a4d063a551ecfd76993b7c8c.setContent(html_2aab409a08efafc29cc96abf95dda3c7);
+            
+        
+
+        circle_marker_07a59493d5b3d2f7290e458d8730fff2.bindPopup(popup_74a41b56a4d063a551ecfd76993b7c8c)
+        ;
+
+        
+    
+    
+            circle_marker_07a59493d5b3d2f7290e458d8730fff2.bindTooltip(
+                `<div>
+                     Akashi Elementary School (Capacity: 3903)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_abd82b4290189e94c90c9f0daeb0e162 = L.circleMarker(
+                [35.667975, 139.771173],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.83999258175524, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_d9100479a86ce1569f35a9a79c47525e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca86acbdfce4d3e669c3d570e707acfe = $(`<div id="html_ca86acbdfce4d3e669c3d570e707acfe" style="width: 100.0%; height: 100.0%;">     <b>Kyobashi Tsukiji Elementary School</b><br>     Capacity: 3,397</div>`)[0];
+                popup_d9100479a86ce1569f35a9a79c47525e.setContent(html_ca86acbdfce4d3e669c3d570e707acfe);
+            
+        
+
+        circle_marker_abd82b4290189e94c90c9f0daeb0e162.bindPopup(popup_d9100479a86ce1569f35a9a79c47525e)
+        ;
+
+        
+    
+    
+            circle_marker_abd82b4290189e94c90c9f0daeb0e162.bindTooltip(
+                `<div>
+                     Kyobashi Tsukiji Elementary School (Capacity: 3397)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_919fd49c85e957fefcffd1b9cd2bc484 = L.circleMarker(
+                [35.674999, 139.775575],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.6082960703909, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_92531f9c2399ac3146ad61a3f860a051 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bedfb2a29466ca41101dad22940f9c49 = $(`<div id="html_bedfb2a29466ca41101dad22940f9c49" style="width: 100.0%; height: 100.0%;">     <b>Kyoka Square</b><br>     Capacity: 2,460</div>`)[0];
+                popup_92531f9c2399ac3146ad61a3f860a051.setContent(html_bedfb2a29466ca41101dad22940f9c49);
+            
+        
+
+        circle_marker_919fd49c85e957fefcffd1b9cd2bc484.bindPopup(popup_92531f9c2399ac3146ad61a3f860a051)
+        ;
+
+        
+    
+    
+            circle_marker_919fd49c85e957fefcffd1b9cd2bc484.bindTooltip(
+                `<div>
+                     Kyoka Square (Capacity: 2460)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f8ced7e493d57d12d2dd74037c07fa3 = L.circleMarker(
+                [35.676011, 139.781852],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.285829091883205, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_3d8677ff0f03d2f6691a4775171946d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77a3893853e632413f0e2e9e91529dc0 = $(`<div id="html_77a3893853e632413f0e2e9e91529dc0" style="width: 100.0%; height: 100.0%;">     <b>Meisei Elementary School</b><br>     Capacity: 5,200</div>`)[0];
+                popup_3d8677ff0f03d2f6691a4775171946d6.setContent(html_77a3893853e632413f0e2e9e91529dc0);
+            
+        
+
+        circle_marker_7f8ced7e493d57d12d2dd74037c07fa3.bindPopup(popup_3d8677ff0f03d2f6691a4775171946d6)
+        ;
+
+        
+    
+    
+            circle_marker_7f8ced7e493d57d12d2dd74037c07fa3.bindTooltip(
+                `<div>
+                     Meisei Elementary School (Capacity: 5200)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07eed0726bde873201b022719e030f29 = L.circleMarker(
+                [35.688038, 139.770509],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.432483669558408, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_f7339495542d34aef1e5195388edcec7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73e2f78dc4ab2269763e9aaa3f321026 = $(`<div id="html_73e2f78dc4ab2269763e9aaa3f321026" style="width: 100.0%; height: 100.0%;">     <b>Tokiwa Elementary School</b><br>     Capacity: 1,749</div>`)[0];
+                popup_f7339495542d34aef1e5195388edcec7.setContent(html_73e2f78dc4ab2269763e9aaa3f321026);
+            
+        
+
+        circle_marker_07eed0726bde873201b022719e030f29.bindPopup(popup_f7339495542d34aef1e5195388edcec7)
+        ;
+
+        
+    
+    
+            circle_marker_07eed0726bde873201b022719e030f29.bindTooltip(
+                `<div>
+                     Tokiwa Elementary School (Capacity: 1749)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df920c36fd77c90a237c90ef623f4683 = L.circleMarker(
+                [35.690907, 139.776991],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.32937006738239, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_5bcb75175263b30725d0ea856ed16b7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a32fa3ddf37a2943f3e5fb9fd97a5cc7 = $(`<div id="html_a32fa3ddf37a2943f3e5fb9fd97a5cc7" style="width: 100.0%; height: 100.0%;">     <b>Jisshi Square</b><br>     Capacity: 1,332</div>`)[0];
+                popup_5bcb75175263b30725d0ea856ed16b7a.setContent(html_a32fa3ddf37a2943f3e5fb9fd97a5cc7);
+            
+        
+
+        circle_marker_df920c36fd77c90a237c90ef623f4683.bindPopup(popup_5bcb75175263b30725d0ea856ed16b7a)
+        ;
+
+        
+    
+    
+            circle_marker_df920c36fd77c90a237c90ef623f4683.bindTooltip(
+                `<div>
+                     Jisshi Square (Capacity: 1332)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae3077d8a511e6136fed2bb862cd3b1e = L.circleMarker(
+                [35.684273, 139.78123],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.771497455129921, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_69cba52db1b13bf577891ad97ac9f832 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf160b1339ac1ef430e18dfad6b1fe3a = $(`<div id="html_cf160b1339ac1ef430e18dfad6b1fe3a" style="width: 100.0%; height: 100.0%;">     <b>Nihonbashi Elementary School</b><br>     Capacity: 3,120</div>`)[0];
+                popup_69cba52db1b13bf577891ad97ac9f832.setContent(html_cf160b1339ac1ef430e18dfad6b1fe3a);
+            
+        
+
+        circle_marker_ae3077d8a511e6136fed2bb862cd3b1e.bindPopup(popup_69cba52db1b13bf577891ad97ac9f832)
+        ;
+
+        
+    
+    
+            circle_marker_ae3077d8a511e6136fed2bb862cd3b1e.bindTooltip(
+                `<div>
+                     Nihonbashi Elementary School (Capacity: 3120)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c44527de0cbcf17dd9e18c9e4dbc5382 = L.circleMarker(
+                [35.683219, 139.787989],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.00764491335078, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_3e500ad1c489719bb850499b6877be7b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75bdf45cf9b49fe4bcff56498b4d05e6 = $(`<div id="html_75bdf45cf9b49fe4bcff56498b4d05e6" style="width: 100.0%; height: 100.0%;">     <b>Arima Elementary School</b><br>     Capacity: 4,075</div>`)[0];
+                popup_3e500ad1c489719bb850499b6877be7b.setContent(html_75bdf45cf9b49fe4bcff56498b4d05e6);
+            
+        
+
+        circle_marker_c44527de0cbcf17dd9e18c9e4dbc5382.bindPopup(popup_3e500ad1c489719bb850499b6877be7b)
+        ;
+
+        
+    
+    
+            circle_marker_c44527de0cbcf17dd9e18c9e4dbc5382.bindTooltip(
+                `<div>
+                     Arima Elementary School (Capacity: 4075)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_649e9ac40bb4a9330c4a4f53f71f51e8 = L.circleMarker(
+                [35.689056, 139.784355],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.041521564425395, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_a600239457b91fb7b41e52f7dafaec1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d67b482beaebdc95bd08f6b869dcb789 = $(`<div id="html_d67b482beaebdc95bd08f6b869dcb789" style="width: 100.0%; height: 100.0%;">     <b>Hisamatsu Elementary School</b><br>     Capacity: 4,212</div>`)[0];
+                popup_a600239457b91fb7b41e52f7dafaec1b.setContent(html_d67b482beaebdc95bd08f6b869dcb789);
+            
+        
+
+        circle_marker_649e9ac40bb4a9330c4a4f53f71f51e8.bindPopup(popup_a600239457b91fb7b41e52f7dafaec1b)
+        ;
+
+        
+    
+    
+            circle_marker_649e9ac40bb4a9330c4a4f53f71f51e8.bindTooltip(
+                `<div>
+                     Hisamatsu Elementary School (Capacity: 4212)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d0ae5d95b12068e72cabba055fd701b = L.circleMarker(
+                [35.691933, 139.786993],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.032619670712357, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_6206b8d290b37c14da87857a6ce32de7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_274076b4a67fc34930a686569450a597 = $(`<div id="html_274076b4a67fc34930a686569450a597" style="width: 100.0%; height: 100.0%;">     <b>Nihonbasi Junior High School</b><br>     Capacity: 4,176</div>`)[0];
+                popup_6206b8d290b37c14da87857a6ce32de7.setContent(html_274076b4a67fc34930a686569450a597);
+            
+        
+
+        circle_marker_0d0ae5d95b12068e72cabba055fd701b.bindPopup(popup_6206b8d290b37c14da87857a6ce32de7)
+        ;
+
+        
+    
+    
+            circle_marker_0d0ae5d95b12068e72cabba055fd701b.bindTooltip(
+                `<div>
+                     Nihonbasi Junior High School (Capacity: 4176)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6bc965f4f072cc2d74504c278bf9ff83 = L.circleMarker(
+                [35.679538, 139.776687],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.738609903356755, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_c5647817f8a76166870bbb91cd39076e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7377f8e4e3130502fbf6ebac06128b16 = $(`<div id="html_7377f8e4e3130502fbf6ebac06128b16" style="width: 100.0%; height: 100.0%;">     <b>Sakamoto Elementary School</b><br>     Capacity: 2,987</div>`)[0];
+                popup_c5647817f8a76166870bbb91cd39076e.setContent(html_7377f8e4e3130502fbf6ebac06128b16);
+            
+        
+
+        circle_marker_6bc965f4f072cc2d74504c278bf9ff83.bindPopup(popup_c5647817f8a76166870bbb91cd39076e)
+        ;
+
+        
+    
+    
+            circle_marker_6bc965f4f072cc2d74504c278bf9ff83.bindTooltip(
+                `<div>
+                     Sakamoto Elementary School (Capacity: 2987)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_61601f68dc6e10a6c32899e988afab33 = L.circleMarker(
+                [35.668599, 139.784518],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.114962187557955, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_93c4c4730b52159c2302adf51389ec64 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a751a2ad457cb88b86ffb5dd6d725a90 = $(`<div id="html_a751a2ad457cb88b86ffb5dd6d725a90" style="width: 100.0%; height: 100.0%;">     <b>Tsukudashima Elementary School</b><br>     Capacity: 4,509</div>`)[0];
+                popup_93c4c4730b52159c2302adf51389ec64.setContent(html_a751a2ad457cb88b86ffb5dd6d725a90);
+            
+        
+
+        circle_marker_61601f68dc6e10a6c32899e988afab33.bindPopup(popup_93c4c4730b52159c2302adf51389ec64)
+        ;
+
+        
+    
+    
+            circle_marker_61601f68dc6e10a6c32899e988afab33.bindTooltip(
+                `<div>
+                     Tsukudashima Elementary School (Capacity: 4509)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0c2dcaf7bb2fcf8bda9d51e5c313967 = L.circleMarker(
+                [35.667941, 139.785025],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.209173896020936, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_6aa1780ab6668d7c299d07182f6a7b3a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ccc78e6aa8ceb513978ebff6eee8895 = $(`<div id="html_0ccc78e6aa8ceb513978ebff6eee8895" style="width: 100.0%; height: 100.0%;">     <b>Tsukuba Junior High School</b><br>     Capacity: 4,890</div>`)[0];
+                popup_6aa1780ab6668d7c299d07182f6a7b3a.setContent(html_0ccc78e6aa8ceb513978ebff6eee8895);
+            
+        
+
+        circle_marker_c0c2dcaf7bb2fcf8bda9d51e5c313967.bindPopup(popup_6aa1780ab6668d7c299d07182f6a7b3a)
+        ;
+
+        
+    
+    
+            circle_marker_c0c2dcaf7bb2fcf8bda9d51e5c313967.bindTooltip(
+                `<div>
+                     Tsukuba Junior High School (Capacity: 4890)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0ab80ec5ded728e711edd9c3996662a = L.circleMarker(
+                [35.660674, 139.780093],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.86645098806899, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_f958c726f1c316bc13424de45b0a1d1c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_333419b2018a05d2f5dc7e8a0bfa4987 = $(`<div id="html_333419b2018a05d2f5dc7e8a0bfa4987" style="width: 100.0%; height: 100.0%;">     <b>Tsukishima First Elementary School</b><br>     Capacity: 3,504</div>`)[0];
+                popup_f958c726f1c316bc13424de45b0a1d1c.setContent(html_333419b2018a05d2f5dc7e8a0bfa4987);
+            
+        
+
+        circle_marker_f0ab80ec5ded728e711edd9c3996662a.bindPopup(popup_f958c726f1c316bc13424de45b0a1d1c)
+        ;
+
+        
+    
+    
+            circle_marker_f0ab80ec5ded728e711edd9c3996662a.bindTooltip(
+                `<div>
+                     Tsukishima First Elementary School (Capacity: 3504)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_43ac79a419bb3b4ff6d500723144f9cd = L.circleMarker(
+                [35.66017, 139.775931],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.948793504914587, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_c2d819dc4f8180f7ab2140aeae1c583f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e73c4c504cd7cce5c8e4c60de833bef4 = $(`<div id="html_e73c4c504cd7cce5c8e4c60de833bef4" style="width: 100.0%; height: 100.0%;">     <b>Tsukishima Second Elementary School</b><br>     Capacity: 3,837</div>`)[0];
+                popup_c2d819dc4f8180f7ab2140aeae1c583f.setContent(html_e73c4c504cd7cce5c8e4c60de833bef4);
+            
+        
+
+        circle_marker_43ac79a419bb3b4ff6d500723144f9cd.bindPopup(popup_c2d819dc4f8180f7ab2140aeae1c583f)
+        ;
+
+        
+    
+    
+            circle_marker_43ac79a419bb3b4ff6d500723144f9cd.bindTooltip(
+                `<div>
+                     Tsukishima Second Elementary School (Capacity: 3837)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a28ebf25deb0c7bbb53a67c35c0d4f19 = L.circleMarker(
+                [35.658848, 139.785703],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.119907684065199, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_4c8145c100cd04cd5d28b1c4a19e4a92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c966c21e80e311d73418cf9251387a43 = $(`<div id="html_c966c21e80e311d73418cf9251387a43" style="width: 100.0%; height: 100.0%;">     <b>Tsukishima Third Elementary School</b><br>     Capacity: 4,529</div>`)[0];
+                popup_4c8145c100cd04cd5d28b1c4a19e4a92.setContent(html_c966c21e80e311d73418cf9251387a43);
+            
+        
+
+        circle_marker_a28ebf25deb0c7bbb53a67c35c0d4f19.bindPopup(popup_4c8145c100cd04cd5d28b1c4a19e4a92)
+        ;
+
+        
+    
+    
+            circle_marker_a28ebf25deb0c7bbb53a67c35c0d4f19.bindTooltip(
+                `<div>
+                     Tsukishima Third Elementary School (Capacity: 4529)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d3bc6961d1726139690c94bbc403464 = L.circleMarker(
+                [35.659743, 139.784908],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.088256506418842, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_d3e6cad50bd95005362f070e62122152 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_82eef70b8b37482a81da0158eb1fce85 = $(`<div id="html_82eef70b8b37482a81da0158eb1fce85" style="width: 100.0%; height: 100.0%;">     <b>Harumi Junior High School</b><br>     Capacity: 4,401</div>`)[0];
+                popup_d3e6cad50bd95005362f070e62122152.setContent(html_82eef70b8b37482a81da0158eb1fce85);
+            
+        
+
+        circle_marker_0d3bc6961d1726139690c94bbc403464.bindPopup(popup_d3e6cad50bd95005362f070e62122152)
+        ;
+
+        
+    
+    
+            circle_marker_0d3bc6961d1726139690c94bbc403464.bindTooltip(
+                `<div>
+                     Harumi Junior High School (Capacity: 4401)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed53f9d3229f6f5f62d4cf0ff699b3f7 = L.circleMarker(
+                [35.654366, 139.773051],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.387706319932411, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_f86686c8be5920490e6e3dada04bdb2f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_05ac7d428e0ae5218d81b07f8b2f4e23 = $(`<div id="html_05ac7d428e0ae5218d81b07f8b2f4e23" style="width: 100.0%; height: 100.0%;">     <b>Toyosu Elementary School</b><br>     Capacity: 5,612</div>`)[0];
+                popup_f86686c8be5920490e6e3dada04bdb2f.setContent(html_05ac7d428e0ae5218d81b07f8b2f4e23);
+            
+        
+
+        circle_marker_ed53f9d3229f6f5f62d4cf0ff699b3f7.bindPopup(popup_f86686c8be5920490e6e3dada04bdb2f)
+        ;
+
+        
+    
+    
+            circle_marker_ed53f9d3229f6f5f62d4cf0ff699b3f7.bindTooltip(
+                `<div>
+                     Toyosu Elementary School (Capacity: 5612)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5af94af685de9cb87a2abc7c24b72da4 = L.circleMarker(
+                [35.670599, 139.77201],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_99dee26a0afcea09cdc27b9b280a4d77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d4ad445ae3936b01f59d5bde4439fd5c = $(`<div id="html_d4ad445ae3936b01f59d5bde4439fd5c" style="width: 100.0%; height: 100.0%;">     <b>Chuo Ward Office</b><br>     Capacity: 0</div>`)[0];
+                popup_99dee26a0afcea09cdc27b9b280a4d77.setContent(html_d4ad445ae3936b01f59d5bde4439fd5c);
+            
+        
+
+        circle_marker_5af94af685de9cb87a2abc7c24b72da4.bindPopup(popup_99dee26a0afcea09cdc27b9b280a4d77)
+        ;
+
+        
+    
+    
+            circle_marker_5af94af685de9cb87a2abc7c24b72da4.bindTooltip(
+                `<div>
+                     Chuo Ward Office (Capacity: 0)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4bfb7a2415d04176c446fb8540916c81 = L.circleMarker(
+                [35.682479, 139.784287],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.143172123884687, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_4a1b93e12c26c6dfaac0b80229efe24a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5053df2e7fb8b98a23f45ebbe93854e6 = $(`<div id="html_5053df2e7fb8b98a23f45ebbe93854e6" style="width: 100.0%; height: 100.0%;">     <b>Nihonbashi Community Center</b><br>     Capacity: 579</div>`)[0];
+                popup_4a1b93e12c26c6dfaac0b80229efe24a.setContent(html_5053df2e7fb8b98a23f45ebbe93854e6);
+            
+        
+
+        circle_marker_4bfb7a2415d04176c446fb8540916c81.bindPopup(popup_4a1b93e12c26c6dfaac0b80229efe24a)
+        ;
+
+        
+    
+    
+            circle_marker_4bfb7a2415d04176c446fb8540916c81.bindTooltip(
+                `<div>
+                     Nihonbashi Community Center (Capacity: 579)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_720414d3cbbfcc4823da876d327fe9fd = L.circleMarker(
+                [35.661921, 139.78192],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.500978796183725, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_758a0c67d66af1a1e9eb584f49721d64 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3061672b2b7c3f0ecd552ff754b373cb = $(`<div id="html_3061672b2b7c3f0ecd552ff754b373cb" style="width: 100.0%; height: 100.0%;">     <b>Tsukishima Community Center</b><br>     Capacity: 2,026</div>`)[0];
+                popup_758a0c67d66af1a1e9eb584f49721d64.setContent(html_3061672b2b7c3f0ecd552ff754b373cb);
+            
+        
+
+        circle_marker_720414d3cbbfcc4823da876d327fe9fd.bindPopup(popup_758a0c67d66af1a1e9eb584f49721d64)
+        ;
+
+        
+    
+    
+            circle_marker_720414d3cbbfcc4823da876d327fe9fd.bindTooltip(
+                `<div>
+                     Tsukishima Community Center (Capacity: 2026)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_575c337a989640bb32ecbf1875b31cee = L.circleMarker(
+                [35.652023, 139.774843],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.118444641348471, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_3725959e490fa5e12a634d1faadc7169 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07262c46f7a6399b82b1779eaac40def = $(`<div id="html_07262c46f7a6399b82b1779eaac40def" style="width: 100.0%; height: 100.0%;">     <b>Hot Plaza Harumi</b><br>     Capacity: 479</div>`)[0];
+                popup_3725959e490fa5e12a634d1faadc7169.setContent(html_07262c46f7a6399b82b1779eaac40def);
+            
+        
+
+        circle_marker_575c337a989640bb32ecbf1875b31cee.bindPopup(popup_3725959e490fa5e12a634d1faadc7169)
+        ;
+
+        
+    
+    
+            circle_marker_575c337a989640bb32ecbf1875b31cee.bindTooltip(
+                `<div>
+                     Hot Plaza Harumi (Capacity: 479)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44e70a7f6fbfe250f9ed62f7353d8594 = L.circleMarker(
+                [35.665155, 139.770788],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.44678439695852, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_ff8ed1583e3f5787a6b92086779fe5d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_455859529d6002e7930c6c2c234bacda = $(`<div id="html_455859529d6002e7930c6c2c234bacda" style="width: 100.0%; height: 100.0%;">     <b>Akatsuki Park</b><br>     Capacity: 9,895</div>`)[0];
+                popup_ff8ed1583e3f5787a6b92086779fe5d1.setContent(html_455859529d6002e7930c6c2c234bacda);
+            
+        
+
+        circle_marker_44e70a7f6fbfe250f9ed62f7353d8594.bindPopup(popup_ff8ed1583e3f5787a6b92086779fe5d1)
+        ;
+
+        
+    
+    
+            circle_marker_44e70a7f6fbfe250f9ed62f7353d8594.bindTooltip(
+                `<div>
+                     Akatsuki Park (Capacity: 9895)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d630ecb4e595434a5abea0cc29bb69fb = L.circleMarker(
+                [35.677069, 139.782438],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.578973397350037, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_125e8c4dc6f97739b6adac59069ce55a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b180377dd80ae1f8ed85816b677e006d = $(`<div id="html_b180377dd80ae1f8ed85816b677e006d" style="width: 100.0%; height: 100.0%;">     <b>Shinkawa Twin Building Area</b><br>     Capacity: 30,650</div>`)[0];
+                popup_125e8c4dc6f97739b6adac59069ce55a.setContent(html_b180377dd80ae1f8ed85816b677e006d);
+            
+        
+
+        circle_marker_d630ecb4e595434a5abea0cc29bb69fb.bindPopup(popup_125e8c4dc6f97739b6adac59069ce55a)
+        ;
+
+        
+    
+    
+            circle_marker_d630ecb4e595434a5abea0cc29bb69fb.bindTooltip(
+                `<div>
+                     Shinkawa Twin Building Area (Capacity: 30650)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e4810fd5a9ef5c768a4188fa727703f = L.circleMarker(
+                [35.666185, 139.784641],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.49147932164273, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_9e0a146b888e7fe437b91fbf5d160949 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65679b4c5d3867d26c4653529297c2f9 = $(`<div id="html_65679b4c5d3867d26c4653529297c2f9" style="width: 100.0%; height: 100.0%;">     <b>Tsukuba River City District</b><br>     Capacity: 22,208</div>`)[0];
+                popup_9e0a146b888e7fe437b91fbf5d160949.setContent(html_65679b4c5d3867d26c4653529297c2f9);
+            
+        
+
+        circle_marker_2e4810fd5a9ef5c768a4188fa727703f.bindPopup(popup_9e0a146b888e7fe437b91fbf5d160949)
+        ;
+
+        
+    
+    
+            circle_marker_2e4810fd5a9ef5c768a4188fa727703f.bindTooltip(
+                `<div>
+                     Tsukuba River City District (Capacity: 22208)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66f07f02758948c087a5c65e7e36dedf = L.circleMarker(
+                [35.653904, 139.780439],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_7422218c2ab0fa914829c053fef5114a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2aadf6dbfaf35207ba9d1b376e910a0b = $(`<div id="html_2aadf6dbfaf35207ba9d1b376e910a0b" style="width: 100.0%; height: 100.0%;">     <b>Harumi Area</b><br>     Capacity: 48,529</div>`)[0];
+                popup_7422218c2ab0fa914829c053fef5114a.setContent(html_2aadf6dbfaf35207ba9d1b376e910a0b);
+            
+        
+
+        circle_marker_66f07f02758948c087a5c65e7e36dedf.bindPopup(popup_7422218c2ab0fa914829c053fef5114a)
+        ;
+
+        
+    
+    
+            circle_marker_66f07f02758948c087a5c65e7e36dedf.bindTooltip(
+                `<div>
+                     Harumi Area (Capacity: 48529)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a89c925cf78cb26d9917e4c55bf7506 = L.circleMarker(
+                [35.685309, 139.77371],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.05207195697418, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_5d2f9d6d2f06469d6d6e0e27ecb73d31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a23e6c645bb74418c9afd96405ebaaa4 = $(`<div id="html_a23e6c645bb74418c9afd96405ebaaa4" style="width: 100.0%; height: 100.0%;">     <b>Nihombashi Mitsukoshi Building</b><br>     Capacity: 20,431</div>`)[0];
+                popup_5d2f9d6d2f06469d6d6e0e27ecb73d31.setContent(html_a23e6c645bb74418c9afd96405ebaaa4);
+            
+        
+
+        circle_marker_6a89c925cf78cb26d9917e4c55bf7506.bindPopup(popup_5d2f9d6d2f06469d6d6e0e27ecb73d31)
+        ;
+
+        
+    
+    
+            circle_marker_6a89c925cf78cb26d9917e4c55bf7506.bindTooltip(
+                `<div>
+                     Nihombashi Mitsukoshi Building (Capacity: 20431)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0c021db7d27a1e870ff5356f1a0b4fc0 = L.circleMarker(
+                [35.68788, 139.788905],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.09165653526757, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_0cb2f6298865f3a7fe1abf5ef36542e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66c379a58400156c928a0b10040f92e8 = $(`<div id="html_66c379a58400156c928a0b10040f92e8" style="width: 100.0%; height: 100.0%;">     <b>Chuo City Sports Center</b><br>     Capacity: 16,547</div>`)[0];
+                popup_0cb2f6298865f3a7fe1abf5ef36542e3.setContent(html_66c379a58400156c928a0b10040f92e8);
+            
+        
+
+        circle_marker_0c021db7d27a1e870ff5356f1a0b4fc0.bindPopup(popup_0cb2f6298865f3a7fe1abf5ef36542e3)
+        ;
+
+        
+    
+    
+            circle_marker_0c021db7d27a1e870ff5356f1a0b4fc0.bindTooltip(
+                `<div>
+                     Chuo City Sports Center (Capacity: 16547)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3180792dd739e7819b60dd15ea7ed7f2 = L.circleMarker(
+                [35.685151, 139.779223],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.853324816089348, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_0b4159c63f33603afda73c4e0a7070c2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_672b5ffc8787507c1ccd99dceae5d46d = $(`<div id="html_672b5ffc8787507c1ccd99dceae5d46d" style="width: 100.0%; height: 100.0%;">     <b>Emeninto Clothing Store</b><br>     Capacity: 7,495</div>`)[0];
+                popup_0b4159c63f33603afda73c4e0a7070c2.setContent(html_672b5ffc8787507c1ccd99dceae5d46d);
+            
+        
+
+        circle_marker_3180792dd739e7819b60dd15ea7ed7f2.bindPopup(popup_0b4159c63f33603afda73c4e0a7070c2)
+        ;
+
+        
+    
+    
+            circle_marker_3180792dd739e7819b60dd15ea7ed7f2.bindTooltip(
+                `<div>
+                     Emeninto Clothing Store (Capacity: 7495)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f836788493aad9c222a849ce72c63a89 = L.circleMarker(
+                [35.694245, 139.782715],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.995507840672587, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_b4a6f2984356c26be494341a953acec6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fb3ae443ddaf02185a40ceaf467dc976 = $(`<div id="html_fb3ae443ddaf02185a40ceaf467dc976" style="width: 100.0%; height: 100.0%;">     <b>Comfort Hotel</b><br>     Capacity: 8,070</div>`)[0];
+                popup_b4a6f2984356c26be494341a953acec6.setContent(html_fb3ae443ddaf02185a40ceaf467dc976);
+            
+        
+
+        circle_marker_f836788493aad9c222a849ce72c63a89.bindPopup(popup_b4a6f2984356c26be494341a953acec6)
+        ;
+
+        
+    
+    
+            circle_marker_f836788493aad9c222a849ce72c63a89.bindTooltip(
+                `<div>
+                     Comfort Hotel (Capacity: 8070)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1d1876d0f52bd1c0f4962f7926d3b7e = L.circleMarker(
+                [35.6877, 139.7767],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.201755651260072, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_ee68b32ce656c49d609bee9b9fd6ead7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66827ef1116dc70faa64b2a4500a478f = $(`<div id="html_66827ef1116dc70faa64b2a4500a478f" style="width: 100.0%; height: 100.0%;">     <b>Tokyo Inn Akihabara Kanda</b><br>     Capacity: 4,860</div>`)[0];
+                popup_ee68b32ce656c49d609bee9b9fd6ead7.setContent(html_66827ef1116dc70faa64b2a4500a478f);
+            
+        
+
+        circle_marker_f1d1876d0f52bd1c0f4962f7926d3b7e.bindPopup(popup_ee68b32ce656c49d609bee9b9fd6ead7)
+        ;
+
+        
+    
+    
+            circle_marker_f1d1876d0f52bd1c0f4962f7926d3b7e.bindTooltip(
+                `<div>
+                     Tokyo Inn Akihabara Kanda (Capacity: 4860)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7e1849b12ad2a50471860dd72e098d1 = L.circleMarker(
+                [35.6775, 139.7788],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "limegreen", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.7099054173793, "stroke": true, "weight": 2}
+            ).addTo(feature_group_3d007e137fcec53ae6fe17a98042e247);
+        
+    
+        var popup_d9d4d02f584636403441ecda7709d2a4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9c5d7bf4b4426297e82182039e42a2a2 = $(`<div id="html_9c5d7bf4b4426297e82182039e42a2a2" style="width: 100.0%; height: 100.0%;">     <b>DDD Hotel</b><br>     Capacity: 6,915</div>`)[0];
+                popup_d9d4d02f584636403441ecda7709d2a4.setContent(html_9c5d7bf4b4426297e82182039e42a2a2);
+            
+        
+
+        circle_marker_f7e1849b12ad2a50471860dd72e098d1.bindPopup(popup_d9d4d02f584636403441ecda7709d2a4)
+        ;
+
+        
+    
+    
+            circle_marker_f7e1849b12ad2a50471860dd72e098d1.bindTooltip(
+                `<div>
+                     DDD Hotel (Capacity: 6915)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_3d007e137fcec53ae6fe17a98042e247.addTo(map_e7dfe1983040957e4fde3a38ece3bff8);
+        
+</script>
+</html>
