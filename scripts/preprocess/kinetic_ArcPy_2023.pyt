@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# ArcPy tool. Import into the ArcGIS Pro toolbox to run.
 import arcpy
 
 
@@ -11,10 +11,10 @@ class Toolbox:
         self.alias = "toolbox"
 
         # List of tool classes associated with this toolbox
-        self.tools = [KineticFloorEnergyCalculator]
+        self.tools = [KineticFloorEnergyCalculator2]
 
 
-class KineticFloorEnergyCalculator:
+class KineticFloorEnergyCalculator2:
     def __init__(self):
         """Define the tool (tool name is the name of the class)."""
         self.label = "Step 1_Building Kinetic Energy Generator"
@@ -112,6 +112,7 @@ class KineticFloorEnergyCalculator:
         import arcpy
         import pandas as pd
         import datetime
+        from datetime import datetime as dt
 
         arcpy.env.overwriteOutput = True
 
@@ -155,27 +156,45 @@ class KineticFloorEnergyCalculator:
 
         ####-----AGGREGATE THE VISITS-----
         arcpy.AddMessage("Processing GPS visit data...")
-        visit_fields = ["TARGET_FID", "uuid", "HHMMSS", "latitude", "longitude"]
+        # Updated field names for new data structure
+        visit_fields = ["TARGET_FID", "tripid", "recordedat", "lat", "lon"]
         visit_data = []
 
         with arcpy.da.SearchCursor(visits_join, visit_fields) as cursor:
             for row in cursor:
                 visit_data.append({
                     "OBJECTID": row[0],
-                    "uuid": row[1], 
-                    "HHMMSS": row[2], 
+                    "tripid": row[1], 
+                    "recordedat": row[2], 
                     "latitude": row[3], 
                     "longitude": row[4]
                 })
 
         df_visits = pd.DataFrame(visit_data)
 
-        # Extract the hour
-        if 'HHMMSS' in df_visits.columns:
-            mask = df_visits['HHMMSS'].notna()
+        # Parse the ISO datetime format and extract hour
+        if 'recordedat' in df_visits.columns:
+            mask = df_visits['recordedat'].notna()
             if mask.any():
-                df_visits.loc[mask, 'hour'] = df_visits.loc[mask, 'HHMMSS'].str.split(':').str[0].astype(int)
-                df_visits['hour'] = df_visits['hour'].fillna(-1).astype(int)
+                # Parse ISO format datetime string (2023-05-21T10:33:59.592Z)
+                try:
+                    df_visits.loc[mask, 'datetime'] = pd.to_datetime(df_visits.loc[mask, 'recordedat'], 
+                                                                   format='%Y-%m-%dT%H:%M:%S.%fZ', 
+                                                                   errors='coerce')
+                    # Alternative parsing if first format fails
+                    still_null = df_visits['datetime'].isna() & mask
+                    if still_null.any():
+                        df_visits.loc[still_null, 'datetime'] = pd.to_datetime(df_visits.loc[still_null, 'recordedat'], 
+                                                                             errors='coerce')
+                    
+                    # Extract hour from parsed datetime
+                    df_visits.loc[mask, 'hour'] = df_visits.loc[mask, 'datetime'].dt.hour
+                    df_visits['hour'] = df_visits['hour'].fillna(-1).astype(int)
+                    
+                    arcpy.AddMessage(f"Successfully parsed {mask.sum()} datetime records")
+                except Exception as e:
+                    arcpy.AddMessage(f"Warning: Could not parse datetime format: {str(e)}")
+                    df_visits['hour'] = -1
             else:
                 df_visits['hour'] = -1
         else:
@@ -183,11 +202,11 @@ class KineticFloorEnergyCalculator:
 
         df_visits['visit'] = 1
 
-        # Aggregate visits by building
+        # Aggregate visits by building using tripid instead of uuid
         arcpy.AddMessage("Aggregating visits by building...")
         building_visits = df_visits.groupby('OBJECTID').agg(
             visits=('visit', 'sum'),
-            uq_visitors=('uuid', 'nunique')
+            uq_visitors=('tripid', 'nunique')  # Changed from uuid to tripid
         ).reset_index()
 
         ###-----ADD ALL FIELDS FIRST (BEFORE ANY CURSORS)-----
@@ -237,8 +256,8 @@ class KineticFloorEnergyCalculator:
         arcpy.AddMessage("Calculating kinetic floor energy generation...")
         
         # Create the complete field list for the cursor
-        coverage_fields = [f"KFA_{pct}p" for pct in coverage_levels]
-        energy_fields = [f"En_{pct}p_kWh" for pct in coverage_levels]
+        coverage_fields = [f"KFloor_{pct}p" for pct in coverage_levels]
+        energy_fields = [f"Energy_{pct}p_kWh" for pct in coverage_levels]
         
         cursor_fields = [
             "OBJECTID",        # 0
