@@ -21,8 +21,8 @@ Urban digital twins are used here as an **interactive GIS-based platform** to si
 - Output data is published to an **ArcGIS Online group**. [link](https://arcg.is/0zSCb9)
 - Data is visualized through:
   - **Web Maps**
-  - **Dashboards** [link](https://www.arcgis.com/apps/dashboards/d30d95c5c09d414fbbe9ca41170330ec)
-  - **Experience Builder** [link](https://experience.arcgis.com/experience/dba9870d0c0f4f36a501eca5dc9c27d5)
+  - **Dashboards** 
+  - **Experience Builder** [link](https://experience.arcgis.com/experience/3cd168b03d3a4c72b63bf71d72212cba)
   - **Interactive Heat-Responsive Shelter Routing Tool for Nihonbashi** [link](https://gt-2025-summer-tokyo-studio.github.io/heatwave_route/)
 
 
