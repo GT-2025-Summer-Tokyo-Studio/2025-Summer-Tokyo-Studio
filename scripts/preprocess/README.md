@@ -1,4 +1,4 @@
-# Kinetic Floor Energy Calculator
+# Kinetic Floor Energy Calculator (KFEC)
 
 An ArcGIS Python Toolbox for calculating potential energy generation from kinetic floor systems based on building foot traffic patterns.
 
