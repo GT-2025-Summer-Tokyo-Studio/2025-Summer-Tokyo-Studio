@@ -21,6 +21,10 @@ The layers used:
 - Buildings_District2
 - GPS_Weekday
 
+## Output Datasets
+
+### Nihonbashi_kinetic.gdb
+
 ## Software Requirements
 
 - ArcGIS Pro or ArcMap with Spatial Analyst extension
