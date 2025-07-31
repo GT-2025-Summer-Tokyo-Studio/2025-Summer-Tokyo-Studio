@@ -74,7 +74,7 @@ This tool calculates the economic feasibility of installing piezoelectric floor 
 import pandas as pd
 from payback_analysis import add_payback_analysis, generate_summary_stats
 
-# Load your kinetic energy dataset
+# Load your kinetic energy dataset from the ArcPy kinetic floor energy calculator tool (it should have the spatially joined variables)
 df = pd.read_csv('kinetic_06292025.csv')
 
 # Add payback analysis columns
